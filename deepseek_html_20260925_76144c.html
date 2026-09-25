@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сусуркаев Исмаил — Биография чемпиона</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #0a0e1a;
+    color: #e8ecf4;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER / NAV ===== */
+  header.site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,14,26,0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(110,168,255,0.12);
+    transition: all 0.3s ease;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo {
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+
+  .logo .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6ea8ff, #ffb400);
+    box-shadow: 0 0 12px rgba(110,168,255,0.8);
+  }
+
+  nav.main-nav {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav.main-nav button {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #93a4c4;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+
+  nav.main-nav button:hover {
+    color: #fff;
+    background: rgba(110,168,255,0.08);
+  }
+
+  nav.main-nav button.active {
+    color: #0a0e1a;
+    background: linear-gradient(120deg, #6ea8ff, #ffb400);
+    box-shadow: 0 4px 18px -6px rgba(110,168,255,0.7);
+  }
+
+  /* ===== PAGE SYSTEM ===== */
+  .page { display: none; animation: fadeIn 0.5s ease; }
+  .page.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(0,120,255,0.25), transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255,180,0,0.15), transparent 50%),
+      linear-gradient(135deg, #060912 0%, #101a33 50%, #060912 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(60,120,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(60,120,255,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 25s linear infinite;
+  }
+
+  @keyframes gridMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(60px,60px); }
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 900px; }
+
+  .badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 2px solid #ffb400;
+    border-radius: 50px;
+    color: #ffb400;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    animation: pulse 2.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(255,180,0,0.4); }
+    50% { box-shadow: 0 0 30px 6px rgba(255,180,0,0.1); }
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    font-weight: 900;
+    background: linear-gradient(120deg, #ffffff 20%, #6ea8ff 50%, #ffb400 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+
+  .hero .subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: #93a4c4;
+    max-width: 620px;
+    margin: 0 auto 40px;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+  }
+
+  .stat {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(110,168,255,0.2);
+    backdrop-filter: blur(10px);
+    padding: 22px 34px;
+    border-radius: 16px;
+    min-width: 150px;
+  }
+
+  .stat .num {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffb400;
+    display: block;
+  }
+
+  .stat .lbl {
+    font-size: 0.8rem;
+    color: #93a4c4;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  /* ===== LAYOUT ===== */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  section.content-section { padding: 90px 0; }
+
+  .page-hero {
+    padding: 160px 20px 60px;
+    text-align: center;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(110,168,255,0.18), transparent 60%),
+      linear-gradient(180deg, #0a0e1a, #060912);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(60,120,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(60,120,255,0.05) 1px, transparent 1px);
+    background-size: 70px 70px;
+    mask-image: radial-gradient(circle at 50% 50%, #000, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, #000, transparent 80%);
+  }
+
+  .page-hero .container { position: relative; z-index: 2; }
+
+  .page-hero .kicker {
+    display: inline-block;
+    color: #6ea8ff;
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .page-hero h2 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.15;
+    background: linear-gradient(120deg, #ffffff 30%, #6ea8ff 70%, #ffb400 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+  }
+
+  .page-hero p {
+    color: #93a4c4;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+    margin-bottom: 14px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #6ea8ff, #ffb400);
+    border-radius: 2px;
+  }
+
+  .section-lead {
+    color: #93a4c4;
+    max-width: 700px;
+    margin: 24px 0 50px;
+    font-size: 1.05rem;
+  }
+
+  /* ===== TEXT BLOCK ===== */
+  .text-block {
+    background: linear-gradient(135deg, rgba(30,45,80,0.5), rgba(15,22,40,0.5));
+    border: 1px solid rgba(110,168,255,0.15);
+    border-radius: 24px;
+    padding: 45px;
+  }
+
+  .text-block p { color: #c3cee0; margin-bottom: 18px; }
+  .text-block p:last-child { margin-bottom: 0; }
+  .text-block strong { color: #ffb400; font-weight: 700; }
+
+  /* ===== CARDS GRID ===== */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(110,168,255,0.15);
+    border-radius: 18px;
+    padding: 30px;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: linear-gradient(180deg, #6ea8ff, #ffb400);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover { transform: translateY(-6px); border-color: rgba(255,180,0,0.4); }
+  .card:hover::after { transform: scaleY(1); }
+
+  .card .icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+  .card h3 { font-size: 1.15rem; margin-bottom: 10px; color: #fff; }
+  .card p { color: #93a4c4; font-size: 0.94rem; }
+
+  /* ===== HIGHLIGHT PANEL ===== */
+  .highlight-panel {
+    background:
+      radial-gradient(circle at 90% 10%, rgba(255,180,0,0.1), transparent 45%),
+      linear-gradient(135deg, rgba(20,32,60,0.9), rgba(10,14,26,0.9));
+    border: 1px solid rgba(255,180,0,0.22);
+    border-radius: 24px;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .highlight-panel .big-num {
+    font-size: clamp(2.6rem, 8vw, 5rem);
+    font-weight: 900;
+    background: linear-gradient(120deg, #6ea8ff, #ffb400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .highlight-panel .big-lbl {
+    color: #c3cee0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  /* ===== QUOTE ===== */
+  .quote-section {
+    padding: 100px 0;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(110,168,255,0.12), transparent 60%),
+      linear-gradient(180deg, rgba(10,14,26,1), rgba(16,26,51,0.6), rgba(10,14,26,1));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quote-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 24px;
+  }
+
+  .quote-mark {
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    color: #ffb400;
+    line-height: 0.5;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .big-quote {
+    font-size: clamp(1.3rem, 3.2vw, 2.1rem);
+    font-weight: 600;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+  }
+
+  .big-quote .accent {
+    background: linear-gradient(120deg, #6ea8ff, #ffb400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .quote-author {
+    margin-top: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: #93a4c4;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .quote-author::before,
+  .quote-author::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: rgba(255,180,0,0.5);
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline { position: relative; padding-left: 40px; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: linear-gradient(180deg, #ffb400, #6ea8ff, #123a8c);
+    border-radius: 2px;
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+  }
+
+  .tl-item.visible { opacity: 1; transform: translateY(0); }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 6px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #0a0e1a;
+    border: 3px solid #ffb400;
+    z-index: 2;
+    box-shadow: 0 0 0 5px rgba(255,180,0,0.12);
+  }
+
+  .tl-age {
+    display: inline-block;
+    background: rgba(110,168,255,0.12);
+    color: #6ea8ff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .tl-item h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  .tl-item p { color: #a9b6cc; }
+
+  /* ===== COACH ===== */
+  .coach-fact {
+    background:
+      radial-gradient(circle at 90% 10%, rgba(255,180,0,0.08), transparent 45%),
+      linear-gradient(135deg, rgba(20,32,60,0.9), rgba(10,14,26,0.9));
+    border: 1px solid rgba(255,180,0,0.2);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .coach-fact .label {
+    color: #93a4c4;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .coach-fact .name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffb400;
+    letter-spacing: 1px;
+  }
+
+  .coach-fact .role {
+    color: #a9b6cc;
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 50px 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #5d6b84;
+    font-size: 0.85rem;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 860px) {
+    .header-inner { flex-direction: column; gap: 10px; padding: 12px 16px; }
+    nav.main-nav button { padding: 7px 13px; font-size: 0.78rem; }
+    .page-hero { padding: 190px 20px 50px; }
+  }
+
+  @media (max-width: 780px) {
+    .text-block { padding: 30px; }
+    .highlight-panel { padding: 35px 24px; }
+    section.content-section { padding: 60px 0; }
+    .stat { padding: 18px 24px; min-width: 120px; }
+    .quote-section { padding: 70px 0; }
+    .coach-fact { padding: 30px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER / NAV ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo"><span class="dot"></span> ИСМАИЛ СУСУРКАЕВ</div>
+    <nav class="main-nav" id="mainNav">
+      <button data-page="home" class="active">Главная</button>
+      <button data-page="childhood">Детство</button>
+      <button data-page="path">Путь</button>
+      <button data-page="career">Карьера</button>
+      <button data-page="championship">Чемпионат</button>
+      <button data-page="future">Будущее</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= PAGE: HOME ================= -->
+<main id="page-home" class="page active">
+  <header class="hero">
+    <div class="hero-content">
+      <div class="badge">Чемпион мира • Синий пояс</div>
+      <h1>Сусуркаев<br>Исмаил</h1>
+      <p class="subtitle">
+        16-летний спортсмен, чей путь начался в 6 лет и привёл на вершину мирового пьедестала.
+      </p>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><span class="num">16</span><span class="lbl">Лет</span></div>
+      <div class="stat"><span class="num">10</span><span class="lbl">Лет в спорте</span></div>
+      <div class="stat"><span class="num">1</span><span class="lbl">Титул мира</span></div>
+      <div class="stat"><span class="num">🎽</span><span class="lbl">Синий пояс</span></div>
+    </div>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Кто такой Исмаил</h2>
+      <p class="section-lead">
+        История юного спортсмена, который превратил детскую мечту в реальные титулы.
+      </p>
+
+      <div class="text-block">
+        <p>
+          <strong>Сусуркаев Исмаил</strong> — 16-летний спортсмен, который за десятилетие упорных
+          тренировок прошёл путь от шестилетнего новичка до чемпиона мира. Его имя сегодня
+          ассоциируется с дисциплиной, характером и результатом.
+        </p>
+        <p>
+          В свои 16 лет он уже носит <strong>синий пояс</strong> — символ серьёзного технического
+          уровня и многолетней работы над собой. Исмаил не просто тренируется — он живёт спортом,
+          доказывая, что возраст не является ограничением для больших побед.
+        </p>
+        <p>
+          За его плечами — тысячи часов на татами, десятки соревнований, победы и поражения,
+          которые закалили его характер и привели к главному титулу — званию чемпиона мира.
+        </p>
+        <p>
+          Используйте навигацию сверху, чтобы изучить его путь по этапам: от первых шагов
+          в зале до планов на будущее.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="quote-wrapper">
+      <span class="quote-mark">“</span>
+      <p class="big-quote">
+        Я не тренируюсь, чтобы стать лучше другого.<br>
+        Я тренируюсь, чтобы стать лучше <span class="accent">самого вчерашнего</span>.
+      </p>
+      <div class="quote-author">Сусуркаев Исмаил</div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= PAGE: CHILDHOOD ================= -->
+<main id="page-childhood" class="page">
+  <header class="page-hero">
+    <div class="container">
+      <span class="kicker">Глава I</span>
+      <h2>Детство</h2>
+      <p>Как всё началось: шесть лет, первый зал и первые шаги на татами.</p>
+    </div>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Первые шаги</h2>
+      <p class="section-lead">От любопытства ребёнка — к осознанному выбору.</p>
+
+      <div class="text-block">
+        <p>
+          История Исмаила начинается в 6 лет. Именно тогда он впервые переступил порог
+          спортивного зала — ещё совсем маленький, но уже с неподдельным интересом
+          к тому, что происходило вокруг.
+        </p>
+        <p>
+          Первые занятия были простыми: базовая стойка, перемещения, элементарные
+          упражнения. Для большинства детей этого возраста спорт — просто игра.
+          Но Исмаил с самых первых дней отличался: он <strong>не сдавался</strong>
+          после неудач и просил повторить упражнение ещё раз.
+        </p>
+        <p>
+          Родители заметили это сразу — ребёнок возвращался домой уставшим, но
+          счастливым. Уже тогда стало понятно: это не просто временное увлечение.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" style="background:rgba(255,255,255,0.015);">
+    <div class="container">
+      <h2 class="section-title">Что сформировало характер</h2>
+      <p class="section-lead">Качества, заложенные в детстве.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <span class="icon">🧸</span>
+          <h3>Игровой интерес</h3>
+          <p>Первые тренировки воспринимались как игра — но игра, которая с каждым днём становилась серьёзнее.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🕰️</span>
+          <h3>Дисциплина</h3>
+          <p>Уже в детстве Исмаил привыкал приходить вовремя, слушать и повторять без напоминаний.</p>
+        </div>
+        <div class="card">
+          <span class="icon">💧</span>
+          <h3>Терпение</h3>
+          <p>Он не ждал быстрых результатов — был готов месяцами оттачивать один и тот же элемент.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🔥</span>
+          <h3>Упорство</h3>
+          <p>Каждое поражение в детских турнирах становилось для него не поводом сдаться, а точкой роста.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Взгляд вперёд</h2>
+      <p class="section-lead">Как детство заложило основу чемпиона.</p>
+
+      <div class="text-block">
+        <p>
+          Именно в детстве сформировался тот фундамент, на котором позже вырос
+          профессиональный спортсмен. Ни один чемпионский титул не появляется
+          случайно — за ним всегда стоят годы ранней работы, часто незаметной
+          для окружающих.
+        </p>
+        <p>
+          Исмаил прошёл этот путь с 6 лет, и каждый год был важным этапом. Следующая
+          глава — о том, как детский интерес превратился в осознанный путь
+          спортсмена.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= PAGE: PATH ================= -->
+<main id="page-path" class="page">
+  <header class="page-hero">
+    <div class="container">
+      <span class="kicker">Глава II</span>
+      <h2>Путь</h2>
+      <p>От первых турниров до перехода в серьёзный спорт — годы становления.</p>
+    </div>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Хронология становления</h2>
+      <p class="section-lead">Каждый этап — это шаг к вершине.</p>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <span class="tl-age">7–9 лет • Фундамент</span>
+          <h3>Формирование характера</h3>
+          <p>
+            В эти годы закладывался фундамент будущего чемпиона. Исмаил тренировался
+            регулярно, без пропусков и поблажек. Он учился не только технике, но и
+            дисциплине: приходить вовремя, слушать, повторять, терпеть.
+          </p>
+          <p>
+            Именно тогда проявилась его отличительная черта — умение работать на
+            перспективу. Пока другие дети хотели быстрых результатов, Исмаил был
+            готов месяцами оттачивать один и тот же элемент.
+          </p>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-age">10–12 лет • Первые победы</span>
+          <h3>Выход на соревновательный уровень</h3>
+          <p>
+            В 10 лет Исмаил начал выступать на детских и юношеских турнирах. Первые
+            соревнования показали ему, что такое настоящая конкуренция. Были и
+            поражения — но каждое из них он превращал в урок.
+          </p>
+          <p>
+            К 12 годам он уже стабильно входил в число призёров региональных турниров,
+            а его имя начали узнавать среди сверстников и тренеров. Техника стала
+            чище, движения — увереннее, а мышление — тактическим.
+          </p>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-age">13–14 лет • Рост</span>
+          <h3>Переход в серьёзный спорт</h3>
+          <p>
+            В этом возрасте спорт перестал быть для Исмаила просто увлечением. Он
+            начал тренироваться по индивидуальному плану, работать над физикой,
+            выносливостью и специализированными навыками.
+          </p>
+          <p>
+            Именно тогда он получил <strong>синий пояс</strong> — подтверждение того,
+            что его уровень вышел на новую ступень. Синий пояс — это не просто цвет,
+            это признание технической зрелости и права выступать на более высоком уровне.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" style="background:rgba(255,255,255,0.015);">
+    <div class="container">
+      <h2 class="section-title">Синий пояс</h2>
+      <p class="section-lead">Символ перехода на новый уровень.</p>
+
+      <div class="highlight-panel">
+        <span class="big-num">🥋</span>
+        <div class="big-lbl">Синий пояс — техническая зрелость и дисциплина</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= PAGE: CAREER ================= -->
+<main id="page-career" class="page">
+  <header class="page-hero">
+    <div class="container">
+      <span class="kicker">Глава III</span>
+      <h2>Карьера</h2>
+      <p>Начало профессионального пути: режим, ответственность и системный подход.</p>
+    </div>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Профессионализация</h2>
+      <p class="section-lead">В 15 лет спорт стал профессией.</p>
+
+      <div class="text-block">
+        <p>
+          В 15 лет Исмаил вступил в фазу профессиональной карьеры. Тренировки стали
+          двухразовыми, режим — строгим, а цели — конкретными и измеримыми.
+          Он начал выступать на турнирах более высокого ранга.
+        </p>
+        <p>
+          Профессиональный подход означал не только больше нагрузок, но и больше
+          ответственности: за восстановление, за питание, за психологическую
+          устойчивость. Исмаил принял эти правила и начал работать по-новому.
+        </p>
+        <p>
+          Именно в этот период он сформировал для себя главный принцип:
+          <strong>«Я не тренируюсь, чтобы стать лучше другого. Я тренируюсь,
+          чтобы стать лучше самого вчерашнего»</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" style="background:rgba(255,255,255,0.015);">
+    <div class="container">
+      <h2 class="section-title">Составляющие успеха</h2>
+      <p class="section-lead">Что стоит за профессиональным ростом.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <span class="icon">💪</span>
+          <h3>Физическая форма</h3>
+          <p>Выносливость, сила и скорость, развитые годами системных тренировок.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🧠</span>
+          <h3>Тактическое мышление</h3>
+          <p>Умение читать соперника и принимать решения в доли секунды.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🔥</span>
+          <h3>Дисциплина</h3>
+          <p>Режим, питание, восстановление — всё подчинено одной цели.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🎯</span>
+          <h3>Целеустремлённость</h3>
+          <p>Способность идти к цели годами, не теряя мотивации.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🧘</span>
+          <h3>Психологическая устойчивость</h3>
+          <p>Способность сохранять концентрацию и спокойствие в решающие моменты.</p>
+        </div>
+        <div class="card">
+          <span class="icon">📈</span>
+          <h3>Постоянный рост</h3>
+          <p>Каждая тренировка — это вклад в будущий результат, а не разовое усилие.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Тренер</h2>
+      <p class="section-lead">Наставник, направляющий путь с первых шагов.</p>
+
+      <div class="coach-fact">
+        <div class="label">Тренер</div>
+        <div class="name">Мовсар Алихаджиев</div>
+        <div class="role">Наставник Сусуркаева Исмаила</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= PAGE: CHAMPIONSHIP ================= -->
+<main id="page-championship" class="page">
+  <header class="page-hero">
+    <div class="container">
+      <span class="kicker">Глава IV</span>
+      <h2>Чемпионат</h2>
+      <p>16 лет, мировая арена и титул, о котором мечтают многие взрослые спортсмены.</p>
+    </div>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Титул чемпиона мира</h2>
+      <p class="section-lead">Результат десяти лет ежедневной работы.</p>
+
+      <div class="text-block">
+        <p>
+          В 16 лет Исмаил достиг того, о чём мечтают многие взрослые спортсмены —
+          он стал <strong>чемпионом мира</strong>. Этот титул стал результатом
+          десяти лет ежедневной работы, тысяч часов тренировок и десятков боёв.
+        </p>
+        <p>
+          Победа на мировом уровне — это не финал, а новая точка отсчёта. Для
+          16-летнего спортсмена это одновременно и огромное достижение, и огромная
+          ответственность. И Исмаил это прекрасно понимает.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" style="background:rgba(255,255,255,0.015);">
+    <div class="container">
+      <h2 class="section-title">Ключевые цифры</h2>
+      <p class="section-lead">Что стоит за титулом.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <span class="icon">🏆</span>
+          <h3>1 титул мира</h3>
+          <p>Главное достижение в карьере 16-летнего спортсмена.</p>
+        </div>
+        <div class="card">
+          <span class="icon">📅</span>
+          <h3>10 лет работы</h3>
+          <p>С 6 до 16 лет — путь ежедневной дисциплины и труда.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🥋</span>
+          <h3>Синий пояс</h3>
+          <p>Технический уровень, подтверждённый на мировой арене.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🌍</span>
+          <h3>Мировой уровень</h3>
+          <p>Победа на международной арене в юном возрасте.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="quote-wrapper">
+      <span class="quote-mark">“</span>
+      <p class="big-quote">
+        Я не тренируюсь, чтобы стать лучше другого.<br>
+        Я тренируюсь, чтобы стать лучше <span class="accent">самого вчерашнего</span>.
+      </p>
+      <div class="quote-author">Сусуркаев Исмаил</div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= PAGE: FUTURE ================= -->
+<main id="page-future" class="page">
+  <header class="page-hero">
+    <div class="container">
+      <span class="kicker">Глава V</span>
+      <h2>Будущее</h2>
+      <p>Путь, который продолжается. Новые цели, новые вершины.</p>
+    </div>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Взгляд вперёд</h2>
+      <p class="section-lead">Что ждёт чемпиона дальше.</p>
+
+      <div class="text-block">
+        <p>
+          Титул чемпиона мира в 16 лет — это не точка, а новая отправная. Впереди —
+          годы работы, новые турниры, новые соперники и новые вершины, к которым
+          Исмаил будет идти так же упорно, как шёл все предыдущие годы.
+        </p>
+        <p>
+          Возраст даёт ему преимущество: время на стороне Исмаила. У него уже есть
+          титул, есть опыт, есть дисциплина и есть цель — становиться лучше
+          <strong>самого вчерашнего</strong> каждый день.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" style="background:rgba(255,255,255,0.015);">
+    <div class="container">
+      <h2 class="section-title">Цели и принципы</h2>
+      <p class="section-lead">То, что ведёт вперёд.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <span class="icon">🚀</span>
+          <h3>Новые вершины</h3>
+          <p>Чемпионский титул — это старт, а не финиш долгого пути.</p>
+        </div>
+        <div class="card">
+          <span class="icon">📚</span>
+          <h3>Постоянное обучение</h3>
+          <p>Каждая тренировка и каждый бой — это урок, который делает спортсмена сильнее.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🧭</span>
+          <h3>Верность принципам</h3>
+          <p>Сравнивать себя только с собой вчерашним — главный ориентир Исмаила.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🏅</span>
+          <h3>Новые титулы</h3>
+          <p>Впереди — новые соревнования и новые возможности доказать свой уровень.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Философия</h2>
+      <p class="section-lead">Принципы, которые остаются неизменными.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>РАБОТА КАЖДЫЙ ДЕНЬ</h3>
+          <p>Нет выходных от цели. Каждая тренировка — вклад в будущую победу.</p>
+        </div>
+        <div class="card">
+          <h3>УВАЖЕНИЕ К СОПЕРНИКУ</h3>
+          <p>Сильный соперник — это возможность стать лучше, а не повод для страха.</p>
+        </div>
+        <div class="card">
+          <h3>ПОРАЖЕНИЕ — ЭТО УРОК</h3>
+          <p>Каждое поражение Исмаил разбирает и превращает в точку роста.</p>
+        </div>
+        <div class="card">
+          <h3>СПОКОЙСТВИЕ И ТОЧНОСТЬ</h3>
+          <p>Побеждает не тот, кто быстрее, а тот, кто думает и действует точно.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>Сусуркаев Исмаил — чемпион мира, синий пояс, 16 лет.</p>
+  <p style="margin-top:8px;">Путь, который продолжается.</p>
+</footer>
+
+<script>
+  // ===== PAGE NAVIGATION =====
+  const navButtons = document.querySelectorAll('#mainNav button');
+  const pages = document.querySelectorAll('.page');
+
+  function switchPage(pageId) {
+    pages.forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + pageId);
+    if (target) {
+      target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    navButtons.forEach(b => b.classList.toggle('active', b.dataset.page === pageId));
+    // Re-observe timeline items in newly shown page
+    observeTimelineItems();
+  }
+
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', () => switchPage(btn.dataset.page));
+  });
+
+  // ===== TIMELINE ANIMATION =====
+  let observer;
+
+  function observeTimelineItems() {
+    if (observer) observer.disconnect();
+
+    const items = document.querySelectorAll('.page.active .tl-item');
+    if (!items.length) return;
+
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    items.forEach(item => {
+      item.classList.remove('visible');
+      observer.observe(item);
+    });
+  }
+
+  // Init on load
+  window.addEventListener('load', observeTimelineItems);
+</script>
+
+</body>
+</html>
